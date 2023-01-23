@@ -1,10 +1,12 @@
+
 fun main() {
-    
+    /*
     var dinossauro = Animal("réptil",'M',"Selva",
                            "Carnivoro",397, true)
     //print("meu bichinho é um " +dinossauro.classe+ " " +dinossauro.dieta+ " e seu habitat natural é a "+dinossauro.habitat
-    dinossauro.Neutro(true)
-    
+    dinossauro.cansado(true)
+    */
+
    //POO - Programação Orientadaa a Objetivos - Simular coisas da realidade na programação
    //
    //Objetos - possui Estados(nome, idade, endereço, altura e etc),
@@ -39,9 +41,16 @@ fun main() {
    println(convidado5.nome)
    val convidado6 = Pessoa("cleusa", 1.63, "castanho", 60.0)
    println(convidado6.nome)
-   */
+  
    //Exercício: Criem um churras e exiba a lista de convidados no console, no min 6 pessoa
+   
 }
+*/
+     val contaCorrente = ContaNoBanco(4002, 8922.00, "Safra",
+                                     "Franco Francescco Aguero")
+      contaCorrente.consultarSaldo()
+}
+
 class Pessoa(val nome: String,
              val altura: Double,
              val corDosOlhos: String, 
@@ -60,28 +69,47 @@ class Animal(val classe: String,
              val dieta: String,
              val idade: Int,
              val voa: Boolean){
-    
+
     /*fun Atacar(bravo: Boolean){
         if(bravo == true){
             println("Animal atacando")
         }else{
             println("Animal de boa, suavao")
         }
-        
+
     }
     */
-    
+     /*
     fun Neutro(calmo: Boolean){
       if(calmo == true){
           println("Animal calmo")
       }else{
-          println("animal de boa, parado")
+          println("animal de boa, descansando")
       }
     }
-          
-          
+    */
+
     //faça um novo comportamento para o seu animal usando uma nova fun
-   
+     /*
+     fun cansado(sede: Boolean){
+      if(sede == true){
+          println("Animal de boa, bebendo água")
+      }else{
+          println("animal caido de sede")
+      }
+     }       
+      */
+    
+    
 }
 //Métodos - Comportamentos da nossa classe, que os nossos receberão
 //eles são declarados usando funções 
+
+class ContaNoBanco(var senha: Int, var saldo: Double,
+                   var banco: String, var dono: String,
+                   ){
+                
+      fun consultarSaldo(){ 
+          println("O saldo da sua conta é R$$saldo")
+      } 
+}
