@@ -112,4 +112,43 @@ class ContaNoBanco(var senha: Int, var saldo: Double,
       fun consultarSaldo(){ 
           println("O saldo da sua conta é R$$saldo")
       } 
+
+fun main() {
+   val contaCorrente = ContaNoBanco(4002,453.6, "Safra",
+                                     "Franco Francescco Aguero")
+      contaCorrente.consultarSaldo()
+      contaCorrente.Deposito(50000.0)
+      contaCorrente.consultarSaldo()
+}
+
+    class ContaNoBanco(var senha: Int, var saldo: Double,
+                   var banco: String, var dono: String,
+                   ){
+                
+      fun consultarSaldo(){ 
+          println("O saldo da sua conta é R$$saldo")
+      }
+      /*
+      fun Saque(valorSaque: Double){
+          if(valorSaque <= 0){
+              println("impossivel sacar R$$valorSaque")
+          }else if(saldo >= valorSaque){
+              saldo -= valorSaque
+              println("Saque de R$$valorSaque realizado com sucesso")   
+          }else{
+              println("Saldo insuficiente, Saque de R$$valorSaque")
+          }    
+      
+      }*/
+      //Exercício -- Faça um novo método para que possamos depositar dinheiro na conta
+      fun Deposito(valorDeposito: Double){
+          if(valorDeposito <= 0){
+              println("impossivel Depositar R$$valorDeposito")
+          }else{
+              saldo += valorDeposito
+              println("Depósito de R$$valorDeposito realizado com sucesso")
+          }
+                
+      }
+      
 }
